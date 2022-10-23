@@ -1,0 +1,164 @@
+   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #E0DFDC;
+}
+
+.wrapper .sidebar{
+    background: rgb(5, 68, 104);
+    position: fixed;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 1000px;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.wrapper .main {
+    position: fixed;
+    top: 0;
+    left: 225px;
+    min-height: 100%;
+    padding: 0 20px;
+}
+
+.wrapper .main h1, 
+.wrapper .main h3 {
+    text-align: left;
+}
+
+.wrapper .main li {
+  display: block;
+  list-style-type: square;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+.wrapper .main label {
+    font-weight: bold;
+}
+.wrapper .main input[type=submit] {
+    padding: 10px;
+    display: block;
+    margin: 15px;
+}
+
+.wrapper .main textarea, 
+.wrapper .main input[type=text] {
+      resize: none;
+      padding: 5px;
+      display: block;
+      margin: 10px;
+      width: 350px;
+}
+
+.wrapper .main a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.wrapper .main .header {
+    padding: 10px 0;
+}
+
+.wrapper .main .wrap {
+    margin: 0 10px;
+    border-top: 2px solid black;
+}
+
+#scene {
+    width: 400px;
+    height: 200px;
+    margin-right: 40px;
+    margin-top: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+#scene_sidebar {
+    background: E0DFDC;
+    position: fixed;
+    float: right;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 1000px;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    border-left: 4px solid rgb(5, 68, 104);
+}
+
+#scene_sidebar label {
+    font-weight: bold;
+    margin: 30px;
+}
