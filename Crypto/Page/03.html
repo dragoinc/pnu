@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration page for Cryptography labs</title>
+    <script type="text/javascript" src="js/convert_lib.js"></script>
+    <script type="text/javascript" src="js/des_lib.js"></script>
+    <script type="text/javascript" src="js/Lab03-DES.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+	        <div class="profile">
+	                <img src="https://media-exp1.licdn.com/dms/image/C5603AQH9Fw_00rZaxQ/profile-displayphoto-shrink_200_200/0/1517355345955?e=1671667200&v=beta&t=IdC7UHiqNxGdwHlZtJ78i9RQBsEta-pLGhycNcWlEgE" alt="profile_picture">
+	                <h3>Петро Дрогомирецький</h3>
+	                <p>ІПЗм-11</p>
+	        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon"><i class="fas fa-backward"></i></span>
+                        <span class="item">Назад до списку</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <div class="header">
+                <h1>Лабораторна робота №3</h1>
+                <p>Програмно реалізувати шифр DES.</p>
+                <p>На вхід подається 64 біти.</p>
+                <p>Виконати процес зашифрування і розшифрування за заданим ключем.</p>
+            </div>
+            <div class="content">        
+                <div class="wrap">
+                    <div>
+                        <label>Введіть повідомлення для шифрування</label>
+                        <input type="text" id="message" value="Message!">
+                        <input type="text" id="message_hex" disabled="disabled">
+                    </div>
+                    <div>
+                        <label>Введіть ключ для шифрування</label>
+                        <input type="text" id="key" class="key" value="cryptone">
+                        <input type="text" id="key_hex" disabled="disabled">       
+                    </div>
+                    <div>
+                        <input type="submit" value="Зашифрувати" onclick="encrypt()">           
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div>
+                        <label>Введіть повідомлення для дешифрування</label>
+                        <textarea id="enc_message"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Розшифрувати" onclick="decrypt()">       
+                    </div>           
+                </div>
+                <div class="wrap">
+                    <label>Результати виконання</label>
+                    <textarea id="scene"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
