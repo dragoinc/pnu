@@ -40,7 +40,7 @@ body{
 
 .wrapper .sidebar .profile h3{
     color: #ffffff;
-    margin: 10px 0 5px;
+    margin: 10px;
 }
 
 .wrapper .sidebar .profile p{
@@ -161,4 +161,17 @@ body{
 #scene_sidebar label {
     font-weight: bold;
     margin: 30px;
+}
+
+.wrapper .main .wrap .inline {
+    display: inline-block;
+    width: 50px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.wrapper .main .wrap .long {
+    width: 300px;
+    text-align: left;
 }
