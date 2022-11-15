@@ -172,10 +172,10 @@ body{
 }
 .wrapper .main .wrap .label{
     display: inline-block;
-    width: 100px;
+    width: 150px;
     padding: 5px;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .wrapper .main .wrap .long {

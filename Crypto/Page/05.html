@@ -53,6 +53,7 @@
                         <input class="inline label" type="text" id="n_value" value="883">              
                         <label class="inline label">Кількість ітерацій</label>
                         <input class="inline label"type="text" id="r_value" value="100">
+                        <br>
                         <label>Результат</label>
                         <input class='inline long' type="text" id="res" disabled="disabled">
                         <input type="submit" value="Знайти значення" onclick="go()">  
@@ -65,10 +66,23 @@
                         <input class='inline' type="text" id="q_value"  disabled="disabled">
                         <label class='inline'>e</label>
                         <input class='inline' type="text" id="e_value"  disabled="disabled">
-                        <input type="submit" value="Згенерувати" onclick="generate()">
+                        <label class='inline'>d</label>
+                        <input class='inline' type="text" id="d_value"  disabled="disabled">
+                        <input type="submit" value="Згенерувати ключі" onclick="generate()">
+                    </div>
+                    <div>
+                        <label class='inline label'>Число для шифрування</label>
+                        <input class='inline' type="text" id="x_value" value="5">
                         <label>Результат</label>
-                        <input class='inline long' type="text" id="res" disabled="disabled">
+                        <input class='inline long' type="text" id="res2" disabled="disabled">
                         <input type="submit" value="Знайти значення" onclick="encrypt()">     
+                    </div>
+                    <div>
+                        <label class='inline label'>Число для дешифрування</label>
+                        <input class='inline' type="text" id="y_value">
+                        <label>Результат</label>
+                        <input class='inline long' type="text" id="res3" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="decrypt()">     
                     </div>
                 </div>
             </div>

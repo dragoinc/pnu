@@ -1,4 +1,4 @@
-// real mofulo function
+// real modulo function
 //Javascript has unique function for module calculation =>
 // r = a - (n * trunc(a/n))
 //while Python and other languages have this implemented as
