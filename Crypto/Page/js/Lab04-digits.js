@@ -66,15 +66,50 @@ function inverse_element(value_a,value_b){
 }
 
 //Eueler's totient function calculation
-function phi(value_a) {
-    let result = 1;
-    for (let i = 2; i < value_a; i++){
-        var tmpArr=gcdex(i, value_a);
-        if (tmpArr[0] == 1)
-            result++;        
+function phi(value_a){
+    var tmpInput=value_a;
+    var tmpArray={};
+    var i = 2;
+    var k = 0;
+    while (value_a%i == 0) {
+        value_a=Math.floor(value_a/i);
+        k++;
     }
-    return result;
+    if (k > 0) {
+        tmpArray[i] = k;
+    }
+    i=3;
+    var break_flag = false;
+    while (i*i<=value_a){
+        var k = 0;
+        for (var el in tmpArray) {
+            if (i*i>value_a) {
+                break_flag = true;
+                break;
+            }
+            if (i%el==0) {
+                i++;
+                i++;
+            }
+        }
+        if (break_flag) break;
+        
+        while (value_a % i==0){
+            value_a=Math.floor(value_a/i);
+            k++;
+        }
+        if (k>0) {tmpArray[i]=k;}
+        
+        i++;i++;
+    }
+    var res = tmpInput;
+    if (value_a != 1) {tmpArray[value_a]=1;}
+    for (var el in tmpArray) {
+        res = res*(1-(1/el));
+    }
+    return Math.trunc(res);
 }
+
 
 //Calculation 1
 function goOne(){

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration page for Cryptography labs</title>
+    <script type="text/javascript" src="js/Lab05-RSA.js"></script>
+    <script type="text/javascript" src="js/Lab04-digits.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+	        <div class="profile">
+	                <img src="https://media-exp1.licdn.com/dms/image/C5603AQH9Fw_00rZaxQ/profile-displayphoto-shrink_200_200/0/1517355345955?e=1671667200&v=beta&t=IdC7UHiqNxGdwHlZtJ78i9RQBsEta-pLGhycNcWlEgE" alt="profile_picture">
+	                <h3>Петро Дрогомирецький</h3>
+	                <p>ІПЗм-11</p>
+	        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon"><i class="fas fa-backward"></i></span>
+                        <span class="item">Назад до списку</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <div class="header">
+                <h1>Лабораторна робота №5</h1>
+                <p>Теорія чисел. Модулярна арифметика</p>
+                <h3>Завдання 1.</h3>
+                <p> запрограмувати тест простоти Міллера — Рабіна:</p>
+                <p>Вхідні дані: n>3, непарне натуральне число, яке потрібно перевірити на простоту; k - кількість раундів. </p>
+                <p>Вихідні дані:  Чи є n складеним або простим числом. Якщо просте, то з якою ймовірністю воно просте</p>
+                <h3>Завдання 2</h3>
+                <p>Реалізувати навчальну криптографічну систему з відкритим ключем RSA:</p>
+                <p>1) прості числа p i q згенерувати програмно, використавши тест простоти Міллера — Рабіна</p>
+                <p>2) згенерувати відкритий і закритий ключі для шифрування та розшифрування. Для пошуку закритого ключа скористатись розширеним алгоритмом Евкліда.</p>
+                <p>3) Завантажити скріни виконання програми (шифрування і розшифрування)</p>
+            </div>
+            <div class="content">        
+                <div class="wrap">
+                    <div>
+                        <h3>Тест простоти Міллера — Рабіна</h3>
+                        <label class="inline label">Значення</label>
+                        <input class="inline label" type="text" id="n_value" value="883">              
+                        <label class="inline label">Кількість ітерацій</label>
+                        <input class="inline label"type="text" id="r_value" value="100">
+                        <label>Результат</label>
+                        <input class='inline long' type="text" id="res" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="go()">  
+                    </div>
+                    <div>
+                        <h3>Навчальна криптографічна система з відкритим ключем RSA</h3>
+                        <label class='inline'>p</label>
+                        <input class='inline' type="text" id="p_value" disabled="disabled">
+                        <label class='inline'>q</label>
+                        <input class='inline' type="text" id="q_value"  disabled="disabled">
+                        <label class='inline'>e</label>
+                        <input class='inline' type="text" id="e_value"  disabled="disabled">
+                        <input type="submit" value="Згенерувати" onclick="generate()">
+                        <label>Результат</label>
+                        <input class='inline long' type="text" id="res" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="encrypt()">     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

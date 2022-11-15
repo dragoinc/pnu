@@ -170,8 +170,15 @@ body{
     margin: 0;
     text-align: center;
 }
+.wrapper .main .wrap .label{
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
 
 .wrapper .main .wrap .long {
-    width: 300px;
+    width: 400px;
     text-align: left;
 }
