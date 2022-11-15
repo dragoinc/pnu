@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration page for Cryptography labs</title>
+    <script type="text/javascript" src="js/Lab04-digits.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+	        <div class="profile">
+	                <img src="https://media-exp1.licdn.com/dms/image/C5603AQH9Fw_00rZaxQ/profile-displayphoto-shrink_200_200/0/1517355345955?e=1671667200&v=beta&t=IdC7UHiqNxGdwHlZtJ78i9RQBsEta-pLGhycNcWlEgE" alt="profile_picture">
+	                <h3>Петро Дрогомирецький</h3>
+	                <p>ІПЗм-11</p>
+	        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon"><i class="fas fa-backward"></i></span>
+                        <span class="item">Назад до списку</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <div class="header">
+                <h1>Лабораторна робота №4</h1>
+                <p>Теорія чисел. Модулярна арифметика</p>
+                <p>1. Реалізувати у вигляді функції gcdex(a,b) ітераційний розширений алгоритм Евкліда пошуку трійки (d,x,y), де ax+by = d. Протестити на прикладі  a= 612 і b=342.</p>
+                <p>2. Реалізувати у вигляді функції inverse_element(a,n) пошук розв'язку рівняння ax=1 (mod n), тобто знаходження мультиплікативного оберненого елемента a^(-1) по модулю n, використовуючи gcdex(a,b).  Протестити на прикладі  a= 5 і  n=18.</p>
+                <p>3. Реалізувати у вигляді функції phi(m) обчислення значення функції Ейлера для заданого m (https://en.wikipedia.org/wiki/Euler%27s_totient_function)
+                </p>
+                <p>
+                   4. Реалізувати у вигляді функції inverse_element_2(a,p) знаходження мультиплікативного оберненого елемента a^(-1) по модулю числа n, використовуючи інший спосіб (теорему Ейлера або малу теорему Ферма у випадку простого числа n=p). Протестити на прикладі  a= 5 і  n=18.
+                </p>
+                <p>Протестувати роботу функцій та заскрінити. </p>
+            </div>
+            <div class="content">        
+                <div class="wrap">
+                    <div>
+                        <h3>Ітераційний розширений алгоритм Евкліда</h3>
+                        <label class='inline'>a</label>
+                        <input class='inline' type="text" id="a_value" value="612">
+                        <label class='inline'>*x</label>
+                        <input class='inline' type="text" id="x_value" disabled="disabled">
+                        <label class='inline'>+b</label>
+                        <input class='inline' type="text" id="b_value" value="342">
+                        <label class='inline'>*y</label>
+                        <input class='inline' type="text" id="y_value" disabled="disabled">
+                        <label class='inline'>=d</label>
+                        <input class='inline' type="text" id="d_value" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="goOne()">  
+                    </div>
+                    <div>
+                        <h3>Знаходження мультиплікативного оберненого елемента</h3>
+                        <label class='inline'>a</label>
+                        <input class='inline' type="text" id="a2_value" value="5">
+                        <label class='inline'>n</label>
+                        <input class='inline' type="text" id="n2_value" value="18">
+                        <label>Результат</label>
+                        <input class='inline long' type="text" id="res2" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="goTwo()">     
+                    </div>
+                    <div>
+                        <h3>Обчислення значення функції Ейлера</h3>
+                        <label class='inline'>a</label>
+                        <input class='inline' type="text" id="a3_value" value="48">
+                        <label>Результат</label>
+                        <input class='inline long' type="text" id="res3" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="goThree()">     
+                    </div>
+                    <div>
+                        <h3>Знаходження мультиплікативного оберненого елемента 2</h3>
+                        <label class='inline'>a</label>
+                        <input class='inline' type="text" id="a4_value" value="5">
+                        <label class='inline'>n</label>
+                        <input class='inline' type="text" id="n4_value" value="18">
+                        <label>Результат</label>
+                        <input class='inline long' type="text" id="res4" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="goFour()">     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

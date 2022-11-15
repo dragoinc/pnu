@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h1>Please, fill in the data about the house</h1>
+    <form method="post" id="form">
+        <div class="form-group">
+
+            <label for="LotArea">Lot area:</label><br>
+            <input type="number" name="LotArea" id="LotArea"  class="form-control" placeholder="Area (sq ft)"><br>
+            <label for="YearBuilt">Year built:</label><br>
+            <input type="number" name="YearBuilt" id="YearBuilt"  class="form-control" placeholder="Year the house is built in"><br>
+            <label for="1stFlrSF">1st floor area:</label><br>
+            <input type="number" name="1stFlrSF" id="1stFlrSF"  class="form-control" placeholder="First floor area (sq ft)"><br>
+            <label for="street">Street:</label><br>
+            <select name="street" id="street" form="form">
+                <option value="Pave">Paved road</option>
+                <option value="Grvl">Gravel road</option>
+            </select><br>
+            <input type="submit" class="btn btn-success" value="Submit">
+        </div>
+    </form>
+
+{% endblock %}
