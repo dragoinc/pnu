@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration page for Cryptography labs</title>
+    <script type="text/javascript" src="js/convert_lib.js"></script>
+    <script type="text/javascript" src="js/Lab06-galois.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+	        <div class="profile">
+	                <img src="https://media-exp1.licdn.com/dms/image/C5603AQH9Fw_00rZaxQ/profile-displayphoto-shrink_200_200/0/1517355345955?e=1671667200&v=beta&t=IdC7UHiqNxGdwHlZtJ78i9RQBsEta-pLGhycNcWlEgE" alt="profile_picture">
+	                <h3>Петро Дрогомирецький</h3>
+	                <p>ІПЗм-11</p>
+	        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon"><i class="fas fa-backward"></i></span>
+                        <span class="item">Назад до списку</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <div class="header">
+                <h1>Лабораторна робота №6</h1>
+                <p>Множення байтів у полі Галуа GF (2^8).</p>
+                <h3>Завдання 1.</h3>
+                <p>Реалізувати у вигляді функцій mul02 і mul03 множення довільного байту на елементи (байти) 02 і 03 над полем Галуа GF (2^8) за модулем m(x) = x^8 + x^4 + x^3 + x + 1, використавши методику зсуву бітів і операцію ХОR (малюнки 2-4)</p>
+                <p>Протестувати на прикладах: D4 * 02 = B3, BF * 03 = DA</p>
+                <p>Зауваження: </p>
+                <p>1) 02 = x, 03 = x + 1</p>
+                <p>2) Множення на 03 зводиться до множення на 02:   BF * 03 = BF * (02+01) = BF * 02 + BF.</p>
+            </div>
+            <div class="content">        
+                <div class="wrap">
+                    <div>
+                        <h3>Множення довільного байту на елементи (байти) 02</h3>
+                        <label class="inline label">Значення</label>
+                        <input class="inline label"type="text" id="s2_value">
+                        <input class='inline label' type="text" id="hex_s2_value" disabled="disabled">
+                        <br>
+                        <label>Результат</label>
+                        <input class='inline label' type="text" id="res2_value" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="go2()">  
+                    </div>
+                    <div>
+                        <h3>Множення довільного байту на елементи (байти) 03</h3>
+                        <label class="inline label">Значення</label>
+                        <input class="inline label"type="text" id="s3_value">
+                        <input class='inline label' type="text" id="hex_s3_value" disabled="disabled">
+                        <br>
+                        <label>Результат</label>
+                        <input class='inline label' type="text" id="res3_value" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="go3()">  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
