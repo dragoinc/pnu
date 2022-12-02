@@ -75,3 +75,18 @@ String.prototype.hex2bin = function(){
     }
     return back;
 }
+
+//hex value to bin array
+function hex2arr(string){
+    var arr=[];
+    arr=Array.from(string.hex2bin());
+    return arr;
+}
+
+//bin array to hex value
+function arr2hex(arr){
+    var str='';
+    str=arr.join('');
+
+    return str.bin2hex();
+}

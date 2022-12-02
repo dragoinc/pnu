@@ -36,8 +36,8 @@ function xorArr(arr1,arr2){
     (arr1[i]==arr2[i]) ? tmpArr[i]=0:tmpArr[i]=1;
   }
   
-  console.log("XORed array:");
-  console.log(tmpArr);
+//  console.log("XORed array:");
+//  console.log(tmpArr);
   return tmpArr;
 }
 
@@ -56,8 +56,8 @@ function leftShiftArr(arr){
 
 	tmpArr[tmpArr.length-1]="0";
 
-	console.log("Left shifted array:");
-	console.log(tmpArr);
+//	console.log("Left shifted array:");
+//	console.log(tmpArr);
 	return tmpArr;
 }
 
@@ -66,13 +66,62 @@ function leftShiftArr(arr){
 function mul03(array){
 
 	var arr=mul02(array);
-	console.log("Initial again array:");
-	console.log(array);
+//	console.log("Initial again array:");
+//	console.log(array);
 
 	arr=xorArr(array,arr);
 	return arr;
 }
 
+//https://crypto.stackexchange.com/questions/2569/how-does-one-implement-the-inverse-of-aes-mixcolumns
+//multiplying on hex 09
+function mul09(array){
+
+	var arr=mul02(array);
+	var arr=mul02(arr);
+	var arr=mul02(arr);
+
+	arr=xorArr(array,arr);
+	
+	return arr;
+}
+
+//multiplying on hex 11
+function mul11(array){
+
+	var arr=mul02(array);
+	var arr=mul02(arr);
+	arr=xorArr(array,arr);
+	var arr=mul02(arr);
+	arr=xorArr(array,arr);
+	
+
+	return arr;
+}
+
+//multiplying on hex 13
+function mul13(array){
+
+	var arr=mul02(array);
+	arr=xorArr(array,arr);
+	var arr=mul02(arr);
+	var arr=mul02(arr);
+	arr=xorArr(array,arr);
+
+	return arr;
+}
+
+//multiplying on hex 14
+function mul14(array){
+
+	var arr=mul02(array);
+	arr=xorArr(array,arr);
+	var arr=mul02(arr);
+	arr=xorArr(array,arr);
+	var arr=mul02(arr);
+
+	return arr;
+}
 
 //multiplying on hex 02
 function mul02(array){
@@ -82,13 +131,13 @@ function mul02(array){
 	if (parseInt(b7_bit)){
 		var tmpVal=value02;
    		var tmpArr=prepare(value02.toString(2));
-		console.log("1B array:");
-		console.log(tmpArr);
+//		console.log("1B array:");
+//		console.log(tmpArr);
 
    		arr=xorArr(arr,tmpArr);
 	}
-	console.log("Transformed array:");
-	console.log(arr);
+//	console.log("Transformed array:");
+//	console.log(arr);
 	return arr;
 }
 
@@ -114,13 +163,13 @@ function go2(){
 
     var bin_s=s.toString(2);
    	var arr1=prepare(bin_s);
-   	console.log("Initial arr:");
-   	console.log(arr1);
+//   	console.log("Initial arr:");
+//  	console.log(arr1);
 
    	arr1=mul02(arr1);
    	
    	var res=arr1.join("").bin2hex().toUpperCase();
-   	console.log(res);
+//  	console.log(res);
    	
    	document.getElementById("res2_value").value=res.toUpperCase();
 }
@@ -140,13 +189,13 @@ function go3(){
 
     var bin_s=s.toString(2);
    	var arr1=prepare(bin_s);
-   	console.log("Initial arr:");
-   	console.log(arr1);
+//   	console.log("Initial arr:");
+//  	console.log(arr1);
 
    	var arr2=mul03(arr1);
 
    	var res=arr2.join("").bin2hex().toUpperCase();
-   	console.log(res);
+//   	console.log(res);
 
    	document.getElementById("res3_value").value=res.toUpperCase();
 }
