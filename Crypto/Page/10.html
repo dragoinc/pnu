@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration page for Cryptography labs</title>
+    <script type="text/javascript" src="js/Lab05-RSA.js"></script>
+    <script type="text/javascript" src="js/Lab04-digits.js"></script>
+    <script type="text/javascript" src="js/Lab08-protocols.js"></script>
+    <script type="text/javascript" src="js/Lab10-DS.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+	        <div class="profile">
+	                <img src="https://media-exp1.licdn.com/dms/image/C5603AQH9Fw_00rZaxQ/profile-displayphoto-shrink_200_200/0/1517355345955?e=1671667200&v=beta&t=IdC7UHiqNxGdwHlZtJ78i9RQBsEta-pLGhycNcWlEgE" alt="profile_picture">
+	                <h3>Петро Дрогомирецький</h3>
+	                <p>ІПЗм-11</p>
+	        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon"><i class="fas fa-backward"></i></span>
+                        <span class="item">Назад до списку</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <div class="header">
+                <h1>Лабораторна робота №10</h1>
+                <h3>ЕЦП</h3>
+                <p>Розробити алгоритм цифрового підпису DSA або  Эль-Гамаля в режимі підпису.</p>
+                <p>m &lt; p</p>
+            </div>
+            <div class="content">
+                <div class="wrap">
+                    <div>
+                        <h3>Параметри</h3>
+                        <label class='inline'>p</label>
+                        <input class='inline' type="text" id="p_value" disabled="disabled">
+                        <label class='inline'>g</label>
+                        <input class='inline' type="text" id="g_value" disabled="disabled">
+                        <label class='inline'>x</label>
+                        <input class='inline' type="text" id="x_value" disabled="disabled">
+                        <label class='inline'>y</label>
+                        <input class='inline' type="text" id="y_value" disabled="disabled">
+                        <label class='inline'>k</label>
+                        <input class='inline' type="text" id="k_value" disabled="disabled">
+                        <br>
+                        <label class='inline label'>Число для підпису</label>
+                        <input class='inline' type="text" id="m_value" disabled="disabled">
+                        <input type="submit" value="Згенерувати ключі" onclick="generate_parameters()">
+                    </div>
+                    <div>
+                        <h3>Підпис</h3>
+                        <label class='inline'>r</label>
+                        <input class='inline' type="text" id="r_value" disabled="disabled">
+                        <label class='inline'>s</label>
+                        <input class='inline ' type="text" id="s_value" disabled="disabled">
+                        <input type="submit" value="Знайти значення" onclick="sign()">     
+                    </div>
+                    <div>
+                        <h3>Перевірка підпису</h3>
+                        <label class='inline label'>Ліва частина</label>
+                        <input class='inline' type="text" id="res_left" disabled="disabled">
+                        <br>
+                        <label class='inline label'>Права частина</label>
+                        <input class='inline' type="text" id="res_right" disabled="disabled">
+                        <br>
+                        <input class='inline long' type="text" id="result" disabled="disabled">
+
+                        <input type="submit" value="Перевірити підпис" onclick="verify()">     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

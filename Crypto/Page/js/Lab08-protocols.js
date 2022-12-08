@@ -1,4 +1,4 @@
-const maxValue2=30;
+const maxValue2=20;
 
 function modulus(num, denom){
     if (num%denom >= 0){
@@ -15,7 +15,7 @@ function generate_p(){
 	var p=0;
 	var flag=true;
 	while (flag){
-		p=getRandomInt(maxValue2-2)+2;
+		p=getRandom(2, maxValue2-2);
 		var tmp=findPrimality(p, maxRounds); 
 		if (tmp && (p !=0 )) {
 			flag=false;
@@ -36,7 +36,7 @@ function generate_g(value_p){
 	while (true){
 		g=getRandom(2,value_p);
 		if (is_generator(value_p,g)) {
-			console.log(test_g(g,value_p));	
+			console.log('g is generator => '+test_g(g,value_p));	
 			return g;
 		}
 	}
