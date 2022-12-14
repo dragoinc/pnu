@@ -20,13 +20,13 @@ body{
     top: 0;
     left: 0;
     width: 225px;
-    height: 1000px;
-    padding: 20px 0;
+    height: 1200px;
+    padding: 10px 0;
     transition: all 0.5s ease;
 }
 
 .wrapper .sidebar .profile{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -50,7 +50,7 @@ body{
 
 .wrapper .sidebar ul li a{
     display: block;
-    padding: 13px 30px;
+    padding: 8px 30px;
     border-bottom: 1px solid #10558d;
     color: rgb(241, 237, 237);
     font-size: 16px;
@@ -152,7 +152,7 @@ body{
     top: 0;
     right: 0;
     width: 500px;
-    height: 1000px;
+    height: 1200px;
     padding: 20px 0;
     transition: all 0.5s ease;
     border-left: 4px solid rgb(5, 68, 104);

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration page for Cryptography labs</title>
+    <script type="text/javascript" src="js/Lab04-digits.js"></script>
+    <script type="text/javascript" src="js/Lab05-RSA.js"></script>
+    <script type="text/javascript" src="js/Lab08-protocols.js"></script>
+    <script type="text/javascript" src="js/Lab09-sha1.js"></script>
+    <script type="text/javascript" src="js/Lab10-DS.js"></script>
+    <script type="text/javascript" src="js/Lab11-EC.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+	        <div class="profile">
+	                <img src="https://media-exp1.licdn.com/dms/image/C5603AQH9Fw_00rZaxQ/profile-displayphoto-shrink_200_200/0/1517355345955?e=1671667200&v=beta&t=IdC7UHiqNxGdwHlZtJ78i9RQBsEta-pLGhycNcWlEgE" alt="profile_picture">
+	                <h3>Петро Дрогомирецький</h3>
+	                <p>ІПЗм-11</p>
+	        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon"><i class="fas fa-backward"></i></span>
+                        <span class="item">Назад до списку</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <div class="header">
+                <h1>Лабораторна робота №11</h1>
+                <h3>Еліптична криптографія</h3>
+                <p>Частина 1) Виконати програмно завдання у файлі "Завдання для  самостійного розвитку". (Завдання 1 і 2)</p>
+                <p>Частина 2) Реалізувати асиметричний алгоритм шифрування (криптосистему Ель-Гамаля на основі еліптичних кривих) або алгоритм підпису на основі EC (EDSA) (на вибір) (Завдання 3)</p>
+            </div>
+            <div class="content">
+                <div class="wrap">
+                    <div>
+                        <h3>Завдання 1</h3>
+                        <p>Програмно скласти функцію для знаходження всіх точок (x,y) еліптичної кривої</p>
+                        <p>y2=(x3+x+1)mod23</p>
+                        <label class='inline'>Кількість точок</label>
+                        <input class='inline' type="text" id="n_value" disabled="disabled">
+                        <input class='inline long' type="text" id="check" disabled="disabled">
+                        <input type="submit" value="Знайти" onclick="task1_go()">
+                    </div>
+                    <div>
+                        <h3>Завдання 2</h3>
+                        <p>Програмно скласти функцію, що повертає порядок n деякої базової точки G заданої еліптичної кривої y2=x3+x+1(mod23), тобто знайти таке n, що n*G = O. Протестувати для точки G= (17, 20)</p>
+                        <label class='inline'>x</label>
+                        <input class='inline' type="text" id="x_value" value="17">
+                        <label class='inline'>y</label>
+                        <input class='inline ' type="text" id="y_value" value="20"> 
+                        <label class='inline'>a</label>
+                        <input class='inline ' type="text" id="a_value" value="1">
+                        <label class='inline'>p</label>
+                        <input class='inline ' type="text" id="p_value" value="23">
+                        <label class='inline'>n</label>
+                        <input class='inline ' type="text" id="n2_value" disabled="disabled">
+                        
+                        <input type="submit" value="Знайти значення" onclick="task2_go()">     
+                    </div>
+                    <div>
+                        <h3>Завдання 3</h3>
+                        <p>Реалізувати алгоритм підпису на основі EC (EDSA)</p>
+                        <p>P[17,20], y2=x3+x+1(mod23), p=23</p>
+                        <h4>Згенерувати ключі<h4>
+                        <label class='inline'>d</label>
+                        <input class='inline' type="text" id="d_value" disabled="disabled">
+                        <label class='inline'>Qx</label>
+                        <input class='inline ' type="text" id="Qx_value" disabled="disabled"> 
+                        <label class='inline'>Qy</label>
+                        <input class='inline ' type="text" id="Qy_value" disabled="disabled">
+                        <label class='inline'>k</label>
+                        <input class='inline ' type="text" id="k_value" disabled="disabled">
+                        <label class='inline label'>Число для підпису</label>
+                        <input class='inline' type="text" id="m_value" value="9">
+                        <label class='inline'>r</label>
+                        <input class='inline' type="text" id="r_value" disabled="disabled">
+                        <label class='inline'>s</label>
+                        <input class='inline ' type="text" id="s_value" disabled="disabled">
+                        <input type="submit" value="Знайти значення і підписати" onclick="task3_go()">  
+                        <br>
+                        <label class='inline'>r'</label>
+                        <input class='inline ' type="text" id="r_plus_value" disabled="disabled">
+                        <input class='inline long' type="text" id="check2" disabled="disabled">
+                        <input type="submit" value="Перевірити" onclick="verify_EC()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
